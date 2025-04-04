@@ -172,8 +172,8 @@ controller_server:
 local_costmap:
   local_costmap:
     ros__parameters:
-      update_frequency: 5.0
-      publish_frequency: 2.0
+      update_frequency: 10.0
+      publish_frequency: 10.0
       global_frame: odom
       robot_base_frame: base_link
       use_sim_time: False
@@ -192,7 +192,7 @@ local_costmap:
         enabled: True
         observation_sources: scan
         scan:
-          topic: /scan_filtered
+          topic: /realsense_scan_filtered
           max_obstacle_height: 2.0
           clearing: True
           marking: True
@@ -208,7 +208,7 @@ local_costmap:
         mark_threshold: 0
         observation_sources: scan
         scan:
-          topic: /scan_filtered
+          topic: /realsense_scan_filtered
           max_obstacle_height: 2.0
           clearing: True
           marking: True
@@ -238,7 +238,7 @@ global_costmap:
         enabled: True
         observation_sources: scan
         scan:
-          topic: /scan_filtered
+          topic: /realsense_scan_filtered
           max_obstacle_height: 2.0
           clearing: True
           marking: True
@@ -258,7 +258,7 @@ global_costmap:
         mark_threshold: 0
         observation_sources: scan
         scan:
-          topic: /scan_filtered
+          topic: /realsense_scan_filtered
           max_obstacle_height: 2.0
           clearing: True
           marking: True
